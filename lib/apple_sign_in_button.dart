@@ -43,8 +43,8 @@ class AppleSignInButton extends StatefulWidget {
       this.applePaddingLeft = 6,
       this.appleButtonHeight = 50,
       this.appleTitleFontSize = 20,
-      this.continueButtonTitle,
-      this.signInButtonTitle})
+      this.continueButtonTitle = 'Continue with Apple',
+      this.signInButtonTitle = 'Sign in with Apple'})
       : assert(type != null),
         assert(style != null),
         assert(cornerRadius != null),
