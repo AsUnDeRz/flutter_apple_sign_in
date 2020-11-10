@@ -30,6 +30,10 @@ class AppleSignInButton extends StatefulWidget {
 
   final double appleTitleFontSize;
 
+  final String continueButtonTitle;
+
+  final String signInButtonTitle;
+
   const AppleSignInButton(
       {this.onPressed,
       this.type = AppleButtonType.defaultButton,
@@ -38,7 +42,9 @@ class AppleSignInButton extends StatefulWidget {
       this.appleLogoHeight = 14,
       this.applePaddingLeft = 6,
       this.appleButtonHeight = 50,
-      this.appleTitleFontSize = 20})
+      this.appleTitleFontSize = 20,
+      this.continueButtonTitle,
+      this.signInButtonTitle})
       : assert(type != null),
         assert(style != null),
         assert(cornerRadius != null),
@@ -109,8 +115,8 @@ class _AppleSignInButtonState extends State<AppleSignInButton> {
             Align(
               child: Text(
                 widget.type == AppleButtonType.continueButton
-                    ? 'Continue with Apple'
-                    : 'Sign in with Apple',
+                    ? widget.continueButtonTitle
+                    : widget.signInButtonTitle,
                 style: TextStyle(
                   fontSize: widget.appleTitleFontSize,
                   fontWeight: FontWeight.w500,
